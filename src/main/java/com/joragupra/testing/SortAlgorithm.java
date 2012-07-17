@@ -15,13 +15,8 @@ public abstract class SortAlgorithm {
 			String element = it.next();
 			boolean inserted = false;
 			for(int i=0;!inserted && i<sortedList.size();i++){
-				if(compare(sortedList.get(i), element)<0){
-					if(i<sortedList.size()-1){
-						sortedList.add(i+1, element);
-					}
-					else{
-						sortedList.add(element);
-					}
+				if(compare(sortedList.get(i), element)>0){
+					sortedList.add(i, element);
 					inserted = true;
 				}
 			}
