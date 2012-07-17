@@ -1,5 +1,9 @@
 package com.joragupra.testing;
 
+
+/**
+ * @deprecated Use Mockito instead!
+ */
 public class SortAlgormithmConcreteTestSubclass extends SortAlgorithm {
 
 	@Override

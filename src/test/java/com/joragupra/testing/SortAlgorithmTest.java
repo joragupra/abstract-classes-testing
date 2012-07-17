@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.TestCase;
+import static org.mockito.Mockito.*;
 
 /**
  * Unit test for simple App.
@@ -19,8 +20,10 @@ public class SortAlgorithmTest extends TestCase {
 		aList.add("c");
 		aList.add("d");
 		aList.add("e");
-		SortAlgorithm sortAlg = new SortAlgormithmConcreteTestSubclass();
+		SortAlgorithm sortAlg = mock(SortAlgorithm.class, CALLS_REAL_METHODS);
+		doReturn(1).when(sortAlg).compare(anyString(), anyString());
 		List<String> anotherList = sortAlg.sort(aList);
+		System.out.println(anotherList);
 		assertEquals(aList, anotherList);
 	}
 }
