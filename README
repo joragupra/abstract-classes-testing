@@ -1,0 +1,3 @@
+Example for testing abstract classes with Mockito.
+The code is based on a template method pattern for
+string list sorting.
